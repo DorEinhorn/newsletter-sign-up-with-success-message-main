@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+--Tomato: hsl(4, 100%, 67%);
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;  
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--Charcoal-Grey);
+}
+
+.container{
+    background-color: var(--White);
+    border-radius: 2rem;
+    padding: 1rem;
+    display: flex;
+    width: 800px;
+}
+
+.content{
+    padding: 0 2rem ;
+    width: 60%;
+}
+
+.right{
+    width: 40%;
+}
+
+.content h1{
+    font-size: 50px;
+    color: var(--Dark-Slate-Grey);
+    margin: 2rem 0;
+}
+.content p{
+    margin-bottom: 2rem;
+}
+
+.content ul{
+    margin-bottom: 2rem ;
+}
+.content ul li{
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.content ul li::before {
+    content: "\00a0";
+    background-image: url(./assets/images/icon-list.svg);
+    display: inline-block;
+    width: 20px; 
+    height: 20px; 
+    background-size: cover;
+    margin-right: 5px; 
+}
+
+.image{
+    width: 100%;
+    max-height: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+form label{
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+form input{
+padding: 10px 20px;
+border-radius: 5px;
+outline: none;
+border: 1px solid var(--Grey);
+cursor: pointer;
+}
+
+form button{
+    margin-top: 10px;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    color: var(--White);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--Charcoal-Grey);
+}
+
+form button:hover {
+    background:  linear-gradient(135deg, rgba(255,98,87,1) 0%, rgba(232,170,24,1) 100%);
+    transition: all 1s;
+  }
+
+.hide{
+    display: none;
+}
+
+.submit{
+    background-color: var(--White);
+    width: 450px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.submit h1{
+    font-size: 50px;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.submit p{
+    font-size: 0.9rem;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+.icon-success{
+    width: 50px;
+    margin-bottom: 2rem;
+}
+
+.submitted-email{
+    font-weight: 900;
+}
+
+.submit button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    color: var(--White);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--Charcoal-Grey);
+}
+
+.error-input{
+    border: 2px solid var(--Tomato);
+}
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column-reverse;
+      width: 95%;
+      padding: 0;
+    }
+    .container h1 {
+      font-size: 30px;
+    }
+    .right {
+      width: 100%;
+      padding: 20px;
+    }
+    .content {
+      width: 100%;
+    }
+    .right img {
+      content: url("./assets/images/illustration-sign-up-mobile.svg");
+    }
+    form {
+      width: 90%;
+    }
+  }
